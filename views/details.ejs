@@ -1,0 +1,30 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"><table class="table table-hover">
+<table class="table table table-hover">
+    <thead class="thead-dark">
+    <tr>
+        <th>ID</th>
+        <th>First name</th>
+        <th>Last name</th>
+        <th>E-mail</th>
+        <th>Gender</th>
+        <th>Birthdate</th>
+        <th>Country</th>
+        <th>Company</th>
+        <th>Color</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr style="transform: rotate(0);">
+        <td><%= comment.ID %></td>
+        <td><%= comment.Firstname %></td>
+        <td><%= comment.Lastname %></td>
+        <td><%= functions.makeEmail(comment.Firstname, comment.Lastname, comment.Company) %></td>
+        <td><%= comment.Gender %></td>
+        <td><%= functions.formatDate(comment.Birthdate) %></td>
+        <td><%= comment.Country %></td>
+        <td><%= comment.Company %></td>
+        <td style="background-color: <%= comment.Color %>"><%= functions.makeBigLetters(comment.Color) %></td>
+    </tr>
+    </tbody>
+</table>
+    
